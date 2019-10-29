@@ -9,16 +9,14 @@ namespace Singleton_Assignment
     [TestClass]
     public class UnitTest1
     {
-        private IWebDriver _driver;
-
         [TestMethod]
         public void SearchOnGoogle()
         {
-            var googlePage = new GooglePage(_driver);
+            var googlePage = new GooglePage();
             googlePage.Load();
             googlePage.SearchOn("centric it solutions iasi");
 
-            var searchResultPage = new GoogleSeachResultPage(_driver);
+            var searchResultPage = new GoogleSeachResultPage();
             searchResultPage.Load();
 
             Assert.AreEqual(searchResultPage.FirstSearchTitle, "Centric IT Solutions Romania - Acasă | Facebook");
@@ -28,13 +26,8 @@ namespace Singleton_Assignment
         [TestCleanup]
         public void TearDownTest()
         {
-            _driver.Close();
-        }
-
-        [TestInitialize]
-        public void SetupTest()
-        {
-            _driver = new ChromeDriver();
+            WebDriver.Instance.Close();
+            WebDriver.Instance.Dispose();
         }
     }
 }
