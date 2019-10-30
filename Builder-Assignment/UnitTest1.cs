@@ -12,61 +12,58 @@ namespace Builder_Assignment
         [TestMethod]
         public void Given_OrderAPI_When_ANewOrderWasAdded_Then_ShouldHaveOkResponse()
         {
+            var order = Order.Create()
+                .WithMonthYear("03/2019")
+                .WithOrderId(78676)
+                .WithUserInfo(new Userinfo
+                {
+                    Email = "andrei.anton@centric.eu",
+                    FirstName = "Andrei",
+                    LastName = "Anton"
+                })
+                .WithBillingAddress(new Address
+                {
+                    City = "Iasi",
+                    Country = "Romania",
+                    PostalCode = "700032",
+                    Line1 = "Str. Palat 3c",
+                    Line2 = "UBC 4"
+                })
+                .WithShippingAddress(new Address
+                {
+                    City = "Iasi",
+                    Country = "Romania",
+                    PostalCode = "700032",
+                    Line1 = "Str. Palat 3c",
+                    Line2 = "UBC 4"
+                })
+                .WithPayment(new Payment
+                {
+                    Ammount = 144.87f,
+                    Currency = "RON",
+                    Type = "Card"
+                })
+                .WithProduct(new Product
+                {
+                    Name = "Pizza Capriciosa",
+                    Quantity = 1
+                })
+                .WithProduct(new Product
+                {
+                    Name = "Pizza Full Meat",
+                    Quantity = 2
+                })
+                .WithProduct(new Product
+                {
+                    Name = "Meniu Crispy",
+                    Quantity = 1
+                })
+                .Build();
+
             new RestAssured()
                 .Given()
                 .Name("Add new order")
-                .Body(new Order
-                {
-                    UserInfo = new Userinfo
-                    {
-                        Email = "andrei.anton@centric.eu",
-                        FirstName = "Andrei",
-                        LastName = "Anton"
-                    },
-                    BillingAddress = new Address
-                    {
-                        City = "Iasi",
-                        Country = "Romania",
-                        PostalCode = "700032",
-                        Line1 = "Str. Palat 3c",
-                        Line2 = "UBC 4"
-                    },
-                    ShippingAddress = new Address
-                    {
-                        City = "Iasi",
-                        Country = "Romania",
-                        PostalCode = "700032",
-                        Line1 = "Str. Palat 3c",
-                        Line2 = "UBC 4"
-                    },
-                    MonthYear = "03/2019",
-                    OrderId = 78676,
-                    OrderTime = DateTime.Now,
-                    Payment = new Payment
-                    {
-                        Ammount = 144.87f,
-                        Currency = "RON",
-                        Type = "Card"
-                    },
-                    Products = new List<Product>
-                    {
-                        new Product
-                        {
-                            Name = "Pizza Capriciosa",
-                            Quantity = 1
-                        },
-                        new Product
-                        {
-                            Name = "Pizza Full Meat",
-                            Quantity = 2
-                        },
-                        new Product
-                        {
-                            Name = "Meniu Crispy",
-                            Quantity = 1
-                        }
-                    }
-                })
+                .Body(order)
                 .When()
                 .Post("https://test1-workshop.azurewebsites.net/api/test/")
                 .Then()

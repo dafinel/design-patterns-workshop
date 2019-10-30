@@ -5,6 +5,13 @@ namespace Builder
 {
     public class Order
     {
+        private Order()
+        {
+            
+        }
+
+        public static OrderBuilder Create() => new OrderBuilder(new Order());
+
         public Userinfo UserInfo { get; set; }
         public Address ShippingAddress { get; set; }
         public Address BillingAddress { get; set; }
