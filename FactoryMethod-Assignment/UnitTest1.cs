@@ -1,5 +1,5 @@
-﻿using System;
-using FactoryMethod;
+﻿using System.Configuration;
+using FactoryMethod_Assignment.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -29,8 +29,16 @@ namespace FactoryMethod_Assignment
         [TestMethod]
         public void Given_UsersPage_When_IsLoaded_Then_ShouldHaveUsersOrderedByFirstNameAlphabetically()
         {
-            var usersMethods = new UsersMethods(_driver);
-            usersMethods.LoadPage();
+            var clientName = ConfigurationManager.AppSettings["clientName"];
+            UsersMethods usersMethods;
+            if (clientName == "test1")
+            {
+                usersMethods = new CustomUsersMethods(_driver);
+            }
+            else
+            {
+                usersMethods = new NormalUsersMethods(_driver);
+            }
             var isOrderedCorrectly = usersMethods.VerifyIfTheOrderIsCorrect();
 
             Assert.IsTrue(isOrderedCorrectly);
