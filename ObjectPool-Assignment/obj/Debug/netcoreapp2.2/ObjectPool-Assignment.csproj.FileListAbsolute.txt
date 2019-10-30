@@ -1,0 +1,10 @@
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\bin\Debug\netcoreapp2.2\ObjectPool-Assignment.deps.json
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\bin\Debug\netcoreapp2.2\ObjectPool-Assignment.runtimeconfig.json
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\bin\Debug\netcoreapp2.2\ObjectPool-Assignment.runtimeconfig.dev.json
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\bin\Debug\netcoreapp2.2\ObjectPool-Assignment.dll
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\bin\Debug\netcoreapp2.2\ObjectPool-Assignment.pdb
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\obj\Debug\netcoreapp2.2\ObjectPool-Assignment.csproj.CoreCompileInputs.cache
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\obj\Debug\netcoreapp2.2\ObjectPool-Assignment.AssemblyInfoInputs.cache
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\obj\Debug\netcoreapp2.2\ObjectPool-Assignment.AssemblyInfo.cs
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\obj\Debug\netcoreapp2.2\ObjectPool-Assignment.dll
+C:\Workspace\design-patterns-workshop\ObjectPool-Assignment\obj\Debug\netcoreapp2.2\ObjectPool-Assignment.pdb

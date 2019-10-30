@@ -1,0 +1,22 @@
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\bin\Debug\netcoreapp2.2\Singleton.deps.json
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\bin\Debug\netcoreapp2.2\Singleton.runtimeconfig.json
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\bin\Debug\netcoreapp2.2\Singleton.runtimeconfig.dev.json
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\bin\Debug\netcoreapp2.2\Singleton.dll
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\bin\Debug\netcoreapp2.2\Singleton.pdb
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\obj\Debug\netcoreapp2.2\Singleton.csprojAssemblyReference.cache
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\obj\Debug\netcoreapp2.2\Singleton.csproj.CoreCompileInputs.cache
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\obj\Debug\netcoreapp2.2\Singleton.AssemblyInfoInputs.cache
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\obj\Debug\netcoreapp2.2\Singleton.AssemblyInfo.cs
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\obj\Debug\netcoreapp2.2\Singleton.dll
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session1\Singleton\obj\Debug\netcoreapp2.2\Singleton.pdb
+C:\Workspace\design-patterns-workshop\Singleton\bin\Debug\netcoreapp2.2\Singleton.deps.json
+C:\Workspace\design-patterns-workshop\Singleton\bin\Debug\netcoreapp2.2\Singleton.runtimeconfig.json
+C:\Workspace\design-patterns-workshop\Singleton\bin\Debug\netcoreapp2.2\Singleton.runtimeconfig.dev.json
+C:\Workspace\design-patterns-workshop\Singleton\bin\Debug\netcoreapp2.2\Singleton.dll
+C:\Workspace\design-patterns-workshop\Singleton\bin\Debug\netcoreapp2.2\Singleton.pdb
+C:\Workspace\design-patterns-workshop\Singleton\obj\Debug\netcoreapp2.2\Singleton.csprojAssemblyReference.cache
+C:\Workspace\design-patterns-workshop\Singleton\obj\Debug\netcoreapp2.2\Singleton.csproj.CoreCompileInputs.cache
+C:\Workspace\design-patterns-workshop\Singleton\obj\Debug\netcoreapp2.2\Singleton.AssemblyInfoInputs.cache
+C:\Workspace\design-patterns-workshop\Singleton\obj\Debug\netcoreapp2.2\Singleton.AssemblyInfo.cs
+C:\Workspace\design-patterns-workshop\Singleton\obj\Debug\netcoreapp2.2\Singleton.dll
+C:\Workspace\design-patterns-workshop\Singleton\obj\Debug\netcoreapp2.2\Singleton.pdb
