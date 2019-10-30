@@ -3,7 +3,7 @@ using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace AbstractFactory_Assignment.Pages
+namespace AbstractFactory.Pages
 {
     public class MobileCustomUsersPage : UsersPage
     {

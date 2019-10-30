@@ -7,7 +7,7 @@ using OpenQA.Selenium.Support.UI;
 
 #endregion
 
-namespace AbstractFactory_Assignment.Pages
+namespace AbstractFactory.Pages
 {
     public class NormalUsersPage : UsersPage
     {

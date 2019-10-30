@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 
-namespace AbstractFactory_Assignment.Pages
+namespace AbstractFactory.Pages
 {
     public abstract class UsersPage
     {

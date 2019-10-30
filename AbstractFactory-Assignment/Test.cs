@@ -1,11 +1,12 @@
 ﻿using System.Configuration;
 using System.Drawing;
-using AbstractFactory_Assignment.Pages;
+using AbstractFactory.Factories;
+using AbstractFactory.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace AbstractFactory_Assignment
+namespace AbstractFactory
 {
     [TestClass]
     public class Test
@@ -36,30 +37,26 @@ namespace AbstractFactory_Assignment
             _driver.Navigate().GoToUrl(url);
             UsersPage page;
             var clientName = ConfigurationManager.AppSettings["clientName"];
-            if (isMobile)
+            IUsersPageFactory factory;
+
+            if (clientName == "test1")
             {
-                _driver.Manage().Window.Size = new Size(600, 1000);
-                if (clientName == "test1")
-                {
-                    page = new MobileCustomUsersPage(_driver);
-                }
-                else
-                {
-                    page = new MobileNormalUsersPage(_driver);
-                }
-                
+                factory = new CustomUsersPageFactory(_driver);
             }
             else
             {
-                _driver.Manage().Window.Maximize(); 
-                if (clientName == "test1")
-                {
-                    page = new CustomUsersPage(_driver);
-                }
-                else
-                {
-                    page = new NormalUsersPage(_driver);
-                }
+                factory = new NormalUsersPageFactory(_driver);
+            }
+
+            if (isMobile)
+            {
+                _driver.Manage().Window.Size = new Size(600, 1000);
+                page = factory.CreateMobilePage();
+            }
+            else
+            {
+                _driver.Manage().Window.Maximize();
+                page = factory.CreateDesktopPage();
             }
 
             page.Load();

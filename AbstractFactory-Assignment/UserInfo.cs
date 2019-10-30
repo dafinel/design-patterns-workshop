@@ -1,4 +1,4 @@
-﻿namespace AbstractFactory_Assignment
+﻿namespace AbstractFactory
 {
     public class UserInfo
     {

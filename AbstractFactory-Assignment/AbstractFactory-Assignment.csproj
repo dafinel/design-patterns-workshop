@@ -54,6 +54,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\CustomUsersPageFactory.cs" />
+    <Compile Include="Factories\IUsersPageFactory.cs" />
+    <Compile Include="Factories\NormarUsersPageFactory.cs" />
     <Compile Include="Pages\CustomUsersPage.cs" />
     <Compile Include="Pages\MobileCustomUsersPage.cs" />
     <Compile Include="Pages\MobileNormalUsersPage.cs" />
