@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Proxy
 {
-    public class PaymentPage
+    public class PaymentPage : IPaymentPage
     {
         private IWebElement _cardNumber;
         private IWebElement _expirationDate;

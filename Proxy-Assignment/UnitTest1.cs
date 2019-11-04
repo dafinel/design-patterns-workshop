@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -34,10 +35,11 @@ namespace Proxy_Assignment
             var url = ConfigurationManager.AppSettings["url"];
             _driver.Navigate().GoToUrl(url);
 
-            var paymentPage = new PaymentPage(_driver);
+            var paymentPage = new PaymentPageProxy(_driver);
             paymentPage.Fill();
             paymentPage.Submit();
 
+            Thread.Sleep(new TimeSpan(0, 0, 5));
             var okPage = new OkPage(_driver);
 
             Assert.IsTrue(okPage.Is("Payment successful"));

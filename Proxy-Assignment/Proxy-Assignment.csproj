@@ -54,8 +54,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPaymentPage.cs" />
     <Compile Include="OkPage.cs" />
     <Compile Include="PaymentPage.cs" />
+    <Compile Include="PaymentPageProxy.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
