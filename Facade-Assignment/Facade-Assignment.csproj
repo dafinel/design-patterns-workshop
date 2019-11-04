@@ -57,6 +57,7 @@
     <Compile Include="Pages\StepOnePage.cs" />
     <Compile Include="Pages\StepThreePage.cs" />
     <Compile Include="Pages\StepTwoPage.cs" />
+    <Compile Include="Pages\WizardFacade.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

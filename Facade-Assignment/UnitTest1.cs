@@ -32,20 +32,8 @@ namespace Facade_Assignment
         {
             _driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["url"]);
 
-            var step1 = new StepOnePage(_driver);
-            var step2 = new StepTwoPage(_driver);
-            var step3 = new StepThreePage(_driver);
-
-            step1.Load();
-            step1.Fill();
-            step1.Next();
-
-            step2.Load();
-            step2.Fill();
-            step2.Next();
-
-            step3.Load();
-            step3.Next();
+            var wizard = new WizardFacade(_driver);
+            wizard.Fill();
         }
 
     }
