@@ -54,6 +54,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\IPageHandler.cs" />
+    <Compile Include="Handlers\StepFourHandler.cs" />
+    <Compile Include="Handlers\StepHandler.cs" />
+    <Compile Include="Handlers\StepOneHandler.cs" />
+    <Compile Include="Handlers\StepThreeHandler.cs" />
+    <Compile Include="Handlers\StepTwoHandler.cs" />
     <Compile Include="Pages\StepFourPage.cs" />
     <Compile Include="Pages\StepOnePage.cs" />
     <Compile Include="Pages\StepThreePage.cs" />

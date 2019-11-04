@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using ChainOfResponsability.Handlers;
 using ChainOfResponsability.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -27,25 +28,15 @@ namespace ChainOfResponsability_Assignment
 
         private IWebDriver _driver;
 
-        [TestMethod]
-        public void Given_Wizard_When_IsFilled_Then_ShouldCompleteTheForm()
+        [DataTestMethod]
+        [DataRow(true)]
+        [DataRow(false)]
+        public void Given_Wizard_When_IsFilled_Then_ShouldCompleteTheForm(bool isEmployee)
         {
             _driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["url"]);
 
-            var isEmployee = true;
-            var step1 = new StepOnePage(_driver, isEmployee);
-            var step2 = new StepTwoPage(_driver);
-            var step3 = new StepThreePage(_driver);
-            var step4 = new StepFourPage(_driver);
-
-            step1.Handle();
-            step2.Handle();
-            if (isEmployee)
-            {
-                step3.Handle();
-            }
-
-            step4.Handle();
+            var handler = new StepOneHandler(_driver, isEmployee);
+            handler.Handle();
         }
     }
 }
