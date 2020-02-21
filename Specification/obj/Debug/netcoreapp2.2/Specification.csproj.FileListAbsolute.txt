@@ -1,0 +1,11 @@
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\bin\Debug\netcoreapp2.2\Specification.deps.json
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\bin\Debug\netcoreapp2.2\Specification.runtimeconfig.json
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\bin\Debug\netcoreapp2.2\Specification.runtimeconfig.dev.json
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\bin\Debug\netcoreapp2.2\Specification.dll
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\bin\Debug\netcoreapp2.2\Specification.pdb
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\obj\Debug\netcoreapp2.2\Specification.csprojAssemblyReference.cache
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\obj\Debug\netcoreapp2.2\Specification.csproj.CoreCompileInputs.cache
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\obj\Debug\netcoreapp2.2\Specification.AssemblyInfoInputs.cache
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\obj\Debug\netcoreapp2.2\Specification.AssemblyInfo.cs
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\obj\Debug\netcoreapp2.2\Specification.dll
+C:\Users\aanton\Documents\Visual Studio 2017\Projects\Session4\Specification\obj\Debug\netcoreapp2.2\Specification.pdb

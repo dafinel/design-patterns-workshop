@@ -1,0 +1,11 @@
+C:\Workspace\design-patterns-workshop\Specification\bin\Debug\netcoreapp2.0\Specification.deps.json
+C:\Workspace\design-patterns-workshop\Specification\bin\Debug\netcoreapp2.0\Specification.runtimeconfig.json
+C:\Workspace\design-patterns-workshop\Specification\bin\Debug\netcoreapp2.0\Specification.runtimeconfig.dev.json
+C:\Workspace\design-patterns-workshop\Specification\bin\Debug\netcoreapp2.0\Specification.dll
+C:\Workspace\design-patterns-workshop\Specification\bin\Debug\netcoreapp2.0\Specification.pdb
+C:\Workspace\design-patterns-workshop\Specification\obj\Debug\netcoreapp2.0\Specification.csprojAssemblyReference.cache
+C:\Workspace\design-patterns-workshop\Specification\obj\Debug\netcoreapp2.0\Specification.csproj.CoreCompileInputs.cache
+C:\Workspace\design-patterns-workshop\Specification\obj\Debug\netcoreapp2.0\Specification.AssemblyInfoInputs.cache
+C:\Workspace\design-patterns-workshop\Specification\obj\Debug\netcoreapp2.0\Specification.AssemblyInfo.cs
+C:\Workspace\design-patterns-workshop\Specification\obj\Debug\netcoreapp2.0\Specification.dll
+C:\Workspace\design-patterns-workshop\Specification\obj\Debug\netcoreapp2.0\Specification.pdb
