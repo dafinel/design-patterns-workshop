@@ -16,17 +16,25 @@ namespace Singleton
 
         public void Load()
         {
-            _webDriver.Navigate().GoToUrl("https://www.google.ro/?gws_rd=ssl");
+            _webDriver.Navigate().GoToUrl("https://www.google.ro");
             var wait = new WebDriverWait(_webDriver,
                 System.TimeSpan.FromSeconds(15));
+
             wait.Until(driver =>
-                _seachOnInput = driver.FindElement(By.XPath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input")));
+            {
+                var button = driver.FindElement(By.Id("L2AGLb"));
+                button.Click();
+                return true;
+            });
+            wait.Until(driver =>
+                _seachOnInput = driver.FindElement(By.XPath("//*[@id=\"APjFqb\"]")));
         }
 
         public void SearchOn(string text)
         {
             _seachOnInput.SendKeys(text);
-            _seachOnInput.SendKeys(Keys.Enter);
+            _seachOnInput.Submit();
+
         }
     }
 }

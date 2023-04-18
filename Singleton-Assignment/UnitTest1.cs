@@ -3,7 +3,7 @@ using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Edge;
 using Singleton;
 
 namespace Singleton_Assignment
@@ -23,7 +23,7 @@ namespace Singleton_Assignment
             var searchResultPage = new GoogleSeachResultPage(_driver);
             searchResultPage.Load();
 
-            Assert.AreEqual(searchResultPage.FirstSearchTitle, "Centric IT Solutions Romania - Acasă | Facebook");
+            Assert.AreEqual(searchResultPage.FirstSearchTitle, "Working at Centric Romania: IT Careers for your Future");
         }
 
 
@@ -37,9 +37,9 @@ namespace Singleton_Assignment
         public void SetupTest()
         {
             var type = ConfigurationManager.AppSettings["driver"];
-            if (type == "ie")
+            if (type == "edge")
             {
-                _driver = new InternetExplorerDriver();
+                _driver = new EdgeDriver();
             }
             else if(type == "chrome")
             {
