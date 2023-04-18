@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DriverFactory.cs" />
     <Compile Include="GooglePage.cs" />
     <Compile Include="GoogleSeachResultPage.cs" />
     <Compile Include="UnitTest1.cs" />

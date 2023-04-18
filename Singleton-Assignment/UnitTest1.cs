@@ -36,16 +36,7 @@ namespace Singleton_Assignment
         [TestInitialize]
         public void SetupTest()
         {
-            var type = ConfigurationManager.AppSettings["driver"];
-            if (type == "edge")
-            {
-                _driver = new EdgeDriver();
-            }
-            else if(type == "chrome")
-            {
-                _driver = new ChromeDriver();
-            }
-            
+            _driver = DriverFactory.GetDriver();
         }
     }
 }
