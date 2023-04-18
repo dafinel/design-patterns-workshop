@@ -3,12 +3,12 @@ using OpenQA.Selenium.Chrome;
 
 namespace Singleton
 {
-    public class WebDriver
+    public class WebDriverSingleton
     {
         private static IWebDriver _webDriver;
         private static readonly object Lock = new object();
 
-        private WebDriver()
+        private WebDriverSingleton()
         {
             // Empty constructor.
         }

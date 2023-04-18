@@ -9,8 +9,8 @@ namespace Singleton
 
         public void Load()
         {
-            _webDriver.Navigate().GoToUrl("https://www.google.ro");
-            var wait = new WebDriverWait(_webDriver,
+            WebDriverSingleton.Instance.Navigate().GoToUrl("https://www.google.ro");
+            var wait = new WebDriverWait(WebDriverSingleton.Instance,
                 System.TimeSpan.FromSeconds(15));
 
             wait.Until(driver =>

@@ -10,7 +10,7 @@ namespace Singleton
 
         public void Load()
         {
-            var wait = new WebDriverWait(WebDriver.Instance,
+            var wait = new WebDriverWait(WebDriverSingleton.Instance,
                 System.TimeSpan.FromSeconds(15));
             wait.Until(driver =>
                 FirstSearchTitle= driver.FindElement(By.XPath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div/div/div[1]/a/h3")).Text);

@@ -1,7 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using Singleton;
 
 namespace Singleton_Assignment
@@ -26,8 +24,8 @@ namespace Singleton_Assignment
         [TestCleanup]
         public void TearDownTest()
         {
-            WebDriver.Instance.Close();
-            WebDriver.Instance.Dispose();
+            WebDriverSingleton.Instance.Close();
+            WebDriverSingleton.Instance.Dispose();
         }
     }
 }
