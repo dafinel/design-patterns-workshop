@@ -19,7 +19,7 @@ namespace Singleton_Assignment
             var searchResultPage = new GoogleSeachResultPage();
             searchResultPage.Load();
 
-            Assert.AreEqual(searchResultPage.FirstSearchTitle, "Centric IT Solutions Romania - Acasă | Facebook");
+            Assert.AreEqual(searchResultPage.FirstSearchTitle, "Working at Centric Romania: IT Careers for your Future");
         }
 
 
