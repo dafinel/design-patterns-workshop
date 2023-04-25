@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Assignments/FileContentIndex
+/.vs/Assignments/v17
+/FactoryMethod-Assignment/bin/Debug
+/FactoryMethod-Assignment/obj/Debug
+/packages
