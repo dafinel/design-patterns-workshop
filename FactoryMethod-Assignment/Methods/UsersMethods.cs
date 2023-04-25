@@ -1,38 +1,30 @@
-﻿#region Using directives
-
-using System.Configuration;
-using FactoryMethod_Assignment.Pages;
+﻿using System.Configuration;
+using System.Threading;
 using OpenQA.Selenium;
 
-#endregion
-
-namespace FactoryMethod_Assignment.Methods
+namespace FactoryMethod
 {
     public abstract class UsersMethods
     {
-        protected IWebDriver WebDriver { get; }
-        protected UsersPage UsersPage;
+        private readonly UsersPage _usersPage;
 
-        protected UsersMethods(IWebDriver webDriver)
-        {
-            WebDriver = webDriver;
-           
-            LoadPage();
-        }
-
-        private void LoadPage()
+        public UsersMethods(IWebDriver webDriver)
         {
             var url = ConfigurationManager.AppSettings["url"];
-            WebDriver.Navigate().GoToUrl(url);
-            UsersPage = CreateUsersPage();
-            UsersPage.Load();
+            webDriver.Navigate().GoToUrl(url);
+            _usersPage = CreateUsersPage(webDriver);
         }
 
-        public abstract UsersPage CreateUsersPage();
+        public abstract UsersPage CreateUsersPage(IWebDriver webDriver);
+
+        public void LoadPage()
+        {
+            _usersPage.Load();
+        }
 
         public bool VerifyIfTheOrderIsCorrect()
         {
-            return UsersPage.IsFirstUser(new UserInfo
+            return  _usersPage.IsFirstUser(new UserInfo
             {
                 First = "Jacob",
                 Last = "Thornton",

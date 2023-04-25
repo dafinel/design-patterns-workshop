@@ -1,20 +1,24 @@
 ﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
-namespace FactoryMethod_Assignment.Pages
+namespace FactoryMethod
 {
     public abstract class UsersPage
     {
-        protected readonly IWebDriver WebDriver;
-        protected List<UserInfo> Users;
+        protected readonly IWebDriver _webDriver;
+        protected List<UserInfo> _users;
 
-        protected UsersPage(IWebDriver webDriver)
+        public UsersPage(IWebDriver webDriver)
         {
-            WebDriver = webDriver;
-            Users =  new List<UserInfo>();
+            _webDriver = webDriver;
+            _users =  new List<UserInfo>();
         }
 
         public abstract void Load();
+
         public abstract bool IsFirstUser(UserInfo user);
     }
 }

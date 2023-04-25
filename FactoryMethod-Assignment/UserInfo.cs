@@ -1,4 +1,4 @@
-﻿namespace FactoryMethod_Assignment
+﻿namespace FactoryMethod
 {
     public class UserInfo
     {

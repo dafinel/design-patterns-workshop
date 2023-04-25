@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
+using FactoryMethod;
 using FactoryMethod_Assignment.Methods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -33,12 +35,13 @@ namespace FactoryMethod_Assignment
             UsersMethods usersMethods;
             if (clientName == "test1")
             {
-                usersMethods = new CustomUsersMethods(_driver);
+                usersMethods = new WithPostCodeUsersMethods(_driver);
             }
             else
             {
-                usersMethods = new NormalUsersMethods(_driver);
+                usersMethods = new StandardUsersMethods(_driver);
             }
+            usersMethods.LoadPage();
             var isOrderedCorrectly = usersMethods.VerifyIfTheOrderIsCorrect();
 
             Assert.IsTrue(isOrderedCorrectly);
