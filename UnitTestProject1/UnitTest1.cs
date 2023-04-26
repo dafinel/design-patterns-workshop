@@ -1,22 +1,18 @@
-using NUnit.Framework;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using RA;
+using Strategy;
 
-namespace Strategy
+namespace UnitTestProject1
 {
-    [TestFixture("NL")]
-    [TestFixture("RO")]
-    [TestFixture("US")]
-    public class Tests
+    [TestClass]
+    public class UnitTest1
     {
-        public string Country { get; }
-
-        public Tests(string country)
-        {
-            Country = country;
-        }
-
-        [Test]
-        public void Given_AddressValidation_When_AddressIsIncorrect_Then_ShouldHaveValidationErrors()
+        [DataTestMethod]
+        [DataRow("NL")]
+        [DataRow("RO")]
+        [DataRow("US")]
+        public void Given_AddressValidation_When_AddressIsIncorrect_Then_ShouldHaveValidationErrors(string country)
         {
             var response = new RestAssured()
                 .Given()
@@ -24,7 +20,7 @@ namespace Strategy
                 .Header("Content-Type", "application/json")
                 .Body(new Address
                 {
-                    Country = Country,
+                    Country = country,
                     PostalCode = "AAAA76"
                 })
                 .When()
@@ -32,27 +28,26 @@ namespace Strategy
                 .Then()
                 .TestStatus("Status", s => s == 400);
 
-            if (Country == "NL")
+            if (country == "NL")
             {
                 response.TestBody("Line 1", body => body.Line1[0] == "Fill Line 1 if Country is NL")
                     .TestBody("PostalCode", body => body.PostalCode[0] == "Postal Code is not in correct format if Country is NL")
                     .AssertAll();
             }
 
-            if (Country == "RO")
+            if (country == "RO")
             {
                 response.TestBody("Line 1", body => body.Line1[0] == "Fill Line 1 if Country is RO")
                     .TestBody("City", body => body.City[0] == "Fill City if Country is RO")
                     .AssertAll();
             }
 
-            if (Country == "US")
+            if (country == "US")
             {
                 response.TestBody("City", body => body.City[0] == "Fill City if Country is US")
                     .TestBody("PostalCode", body => body.PostalCode[0] == "Postal Code is not in correct format if Country is US")
                     .AssertAll();
             }
-
         }
     }
 }
